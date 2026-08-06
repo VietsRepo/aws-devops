@@ -1,0 +1,4 @@
+bucket = "terraform-state-s3-navang-london"
+key    = "lab-8_state/terraform_state"
+region  = "eu-west-2"
+use_lockfile = true

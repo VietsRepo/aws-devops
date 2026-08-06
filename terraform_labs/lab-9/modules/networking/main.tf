@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 # Tạo theo luồng kiến thức cái nào cần có trước
@@ -10,6 +10,7 @@ provider "aws" {
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
   enable_dns_support = true # to enable public dns for instance
+  enable_dns_hostnames = true
 
   tags = {
     Name: "vpc_created_by_terraform"
